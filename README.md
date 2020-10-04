@@ -44,33 +44,33 @@ Lastly where I spent the rest of my time was at my computer.  As you can see the
         
         
         
-3D Models List:  (28 Objects)
-        Trees
-        Welcome mat (Custom)
-        Building Structure (Custom)
-        Table (Custom)
-        Chairs to table (Custom)
-        Board Game (Custom)
-        Plant
-        Benchpress
-        Dumbbells
-        Motorcycle Wall Picture (Custom)
-        PC Desk (Custom)
-        Monitor (Custom)
-        Mouse and Keyboard (Custom)
-        Desk Chair
-        PC
-        Lamp (Custom)
-        Speakers
-        Trash Cups (With Custom Implementation - Disappear)
-        Fan (Custom)
-        Bed
-        Bed Lamp
-        Dressor 
-        Books
-        TV
-        TV Stand
-        Leather Couch
-        Dog (With Custom Implementation - Bark)
-        Lights
+3D Models List:  (28 Objects)--
+        Trees--
+        Welcome mat (Custom)--
+        Building Structure (Custom)--
+        Table (Custom)--
+        Chairs to table (Custom)--
+        Board Game (Custom)--
+        Plant--
+        Benchpress--
+        Dumbbells--
+        Motorcycle Wall Picture (Custom)--
+        PC Desk (Custom)--
+        Monitor (Custom)--
+        Mouse and Keyboard (Custom)--
+        Desk Chair--
+        PC--
+        Lamp (Custom)--
+        Speakers--
+        Trash Cups (With Custom Implementation - Disappear)--
+        Fan (Custom)--
+        Bed--
+        Bed Lamp--
+        Dressor --
+        Books--
+        TV--
+        TV Stand--
+        Leather Couch--
+        Dog (With Custom Implementation - Bark)--
+        Lights--
         
