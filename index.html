@@ -5,6 +5,10 @@
   <script src="libs/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component/dist/aframe-proxy-event-component.min.js"></script>
+
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
     <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
 
@@ -37,25 +41,19 @@
     <a-asset-item id="Dog" src ="models/Dog.glb"></a-asset-item>
     <a-asset-item id="Plant" src ="models/plant.glb"></a-asset-item>
     <a-asset-item id="tree" src ="models/tree.glb"></a-asset-item>
+    <a-asset-item id="TrashCup" src ="models/TrashCup.glb"></a-asset-item>
     
   </a-assets>
 
 
-<!--
-<a-entity camera="" position="0 1.5 0" wasd-controls="acceleration: 500" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
--->
+
 <a-entity position="3 .05 -14" rotation="0 180 0">
         <a-camera universal-controls>
             <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
                               radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
         </a-camera>
     </a-entity>
-<!--
-<a-camera position="3 1.5 -12" rotation="0 0 180" universal-controls>
-  <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
-  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"  ></a-entity>
-        </a-camera>
--->
+
 <a-text value="Project 1: Schafer Cunningham" position="9.5 3.5 -3" scale="5 5 5" rotation="0 180 0" color="#000000"></a-text>
 
 <a-box id="BedroomLightSwitch" scale=".1 0.3 0.1" color="#00ff40" position="3.5 1.3 -.8" class="intersectable"
@@ -65,18 +63,26 @@ onclick="setLampLight()">
 
 <a-text value="Pet me!! (Click)" position="5.5 1.5 1.33" scale=".75 .75 .75" rotation="0 180 0" color="#ffffff"></a-text>
 
+<!-- interactable dog and if pet/clcik on it, the dog will bark -->
 <a-entity gltf-model="#Dog" scale=".03 .03 .03" position="5.5 0.45 1.3" rotation="0 0 0" sound="src: url(DogBark.mp3); on: click" class="intersectable"></a-entity>
 
-<a-entity gltf-model="#WeightSet" scale=".01 .01 .01" position="-2.4 0 6.4" rotation="0 90 0"></a-entity>
 
-<a-entity gltf-model="#WeightRoom" scale="1 1 1" position="-2.5 .6 4.25" rotation="0 -90 0"></a-entity>
+<!-- Is a part of my covid mode and if you look at it, it will be removed from the scene -->
+<a-entity gltf-model="#WeightSet" scale=".01 .01 .01" position="-2.4 0 6.4" rotation="0 90 0" ></a-entity>
+<a-entity gltf-model="#WeightRoom" scale="1 1 1" position="-2.5 .6 4.25" rotation="0 -90 0" event-set__makevisible="_event: mouseleave; visible: false" class="intersectable">
 
+<a-text value="Look at me to remove this object from covid mode" position="0 1 0" scale=".75 .75 .75" rotation="0 180 0" color="#ffffff"></a-text>
+
+</a-entity>
+
+
+<!-- Outside view of my room -->  
 <a-entity gltf-model="#tree" scale=".01 .01 .01" position="5.5 -.10 -10" rotation="0 -90 0"></a-entity>
 <a-entity gltf-model="#tree" scale=".01 .01 .01" position="5.5 -.10 -7" rotation="0 -90 0"></a-entity>
 <a-entity gltf-model="#tree" scale=".01 .01 .01" position="-.05 -.10 -10" rotation="0 -90 0"></a-entity>
 <a-entity gltf-model="#tree" scale=".01 .01 .01" position="-.05 -.10 -7" rotation="0 -90 0"></a-entity>
 
-
+<!-- Contains my board game, table, and chairs setup -->
   <a-entity position="-1.4 1 -.8" rotation="0 0 0" collider-check id="desek-lamp" active="false">
     <a-box id="GameBoard" scale=".5 .06 .5" position="0 0 0" color="#ffffff"  src="images/mopoly.jpg"></a-box>
 
@@ -119,7 +125,7 @@ onclick="setLampLight()">
   </a-entity>
 
 
-
+<!-- Ceiling Fan in my bedroom -->
 <a-entity position="6 0 -2" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 1000">
         <a-box id="FanBlade" scale="1.5 .05 .2" color="#ffffff"  position="0 2 0"></a-box>
         <a-box id="FanBlade" scale=".2 .05 1.5" color="#ffffff"  position="0 2 0"></a-box>
@@ -128,20 +134,14 @@ onclick="setLampLight()">
 </a-entity>
 
 
-<!--
-<a-entity camera="" position="0 1.5 0" wasd-controls="acceleration: 500" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
--->
-<!--
-  <a-entity position="0 1.5 0" camera look-controls wasd-controls="acceleration: 500"></a-entity>
--->
-
+<!-- Everything that is contained inside my rooms walls -->
 		<rw-room position="-4 0 -4" material="color:#808080">
       <a-box id="WallBackSide" scale="-.05 5 12" position="12 0 6.02" color="#ffffff"  material="src:#brickwall; repeat: 10 10"></a-box>
       <!-- Divides the bedroom with the PC room -->
       <a-box id="WallPCdivider" scale="4.5 5 .05" position="9.7 0 6" color="#ffffff"  material="src:#brickwall; repeat: 10 10"></a-box>
       <a-box id="WallRoomDivider" scale="3.5 5 .05" position="7.5 0 1.73" color="#ffffff" rotation="0 90 0"  material="src:#brickwall; repeat: 10 10"></a-box>
      
-
+<!-- PC area including PC, speakers, trash, chair, desk, monitor, keyboard mouse -->
       <a-box id="WallRoomDoorDivider" scale="1.25 5 .05" position="7.5 0 5.4" color="#ffffff" rotation="0 90 0" material="src:#brickwall; repeat: 10 10"></a-box>
 			<rw-wall position="12 0 0">
         <a-entity gltf-model="#GamingPC" scale=".0075 .0075 .0075" position="8.2 0 -.3" rotation="0 90 0"></a-entity>
@@ -149,6 +149,13 @@ onclick="setLampLight()">
         <a-entity gltf-model="#Speakers" scale=".01 .01 .01" position="11.65 .5 .5" rotation="0 -225 0"></a-entity>
         <a-entity gltf-model="#Speakers" scale=".01 .01 .01" position="6.5 0 .5" rotation="0 225 0"></a-entity>
         <a-entity gltf-model="#Speakers" scale=".01 .01 .01" position="6.5 .5 .5" rotation="0 225 0"></a-entity>
+
+        <!-- Is a part of my covid mode and if you look at it, it will be removed from the scene -->
+        <a-entity gltf-model="#TrashCup" scale=".9 .9 .9" position="20 0 0" rotation="0 225 0" event-set__makevisible="_event: mouseleave; visible: false" class="intersectable"></a-entity>
+        <a-entity gltf-model="#TrashCup" scale=".9 .9 .9" position="19 0 .5" rotation="0 225 0" event-set__makevisible="_event: mouseleave; visible: false" class="intersectable"></a-entity>
+        <a-entity gltf-model="#TrashCup" scale=".9 .9 .9" position="19.8 0 1" rotation="0 225 0" event-set__makevisible="_event: mouseleave; visible: false" class="intersectable"></a-entity>
+        <a-entity gltf-model="#TrashCup" scale=".9 .9 .9" position="18.5 0 2" rotation="0 225 0" event-set__makevisible="_event: mouseleave; visible: false" class="intersectable"></a-entity>
+        <a-entity gltf-model="#TrashCup" scale=".9 .9 .9" position="18 0 .5" rotation="0 225 0" event-set__makevisible="_event: mouseleave; visible: false" class="intersectable"></a-entity>
         
         <a-box id="ComputerDesk" scale="1.5 .05 1.5" position="9.5 1 0" color="#ffffff"  material="src:#wood; repeat: 10 10"></a-box>
         <a-box id="DeskLeftLeg" scale=".1 1 .1" position="9 .5 .6" color="#000000"  ></a-box>
@@ -160,7 +167,7 @@ onclick="setLampLight()">
         <a-box id="ComputerKeyboard" scale=".75 .01 .30" position="9.5 1.05 .5" color="#ffffff"  src="images/keyboard.jpg"></a-box>
         <a-box id="ComputerMouse" scale=".2 .0255 .2" position="10 1.05 .5" color="#000000" ></a-box>
         
-
+<!-- Bedroom objects such as couch, books, dresser, bed, and old desk lamp -->
         <a-gltf-model id="couch" src="models/sofa/scene.gltf" scale="0.0015 0.0015 0.0015" position="4.6 0 2.7" rotation="0 -52.5 0" gltf-model="models/sofa/scene.gltf" ></a-gltf-model>
         
         <a-entity gltf-model="#Dresser" scale=".00275 .00275 .00275" position="3.5 0 .5" rotation="0 0 0"></a-entity>
@@ -176,28 +183,8 @@ onclick="setLampLight()">
         <a-box id="PictureFrame" scale="1.5 1.5 .1" position="6.5 1 0" color="#ffffff" src="moto.jpg"></a-box>
         <a-entity gltf-model="#cabinet" scale=".0015 .0015 .0015" position="4.25 0 10.2" rotation="0 -90 0"></a-entity>
         <a-entity gltf-model="#TV" scale=".15 .15 .15" position="4.25 .55 10.2" rotation="0 -90 0"></a-entity>
-        <!--
-        <a-gltf-model id="deskChair" src="models/deskChair/scene.gltf" position="0 0 0" gltf-model="models/deskChair/scene.gltf" rotation="0 40 0" scale="15 15 15"></a-gltf-model>
--->
-       <!--
-        <a-entity scale=".15 .2 .3" id="boxID" position="3 0 10.2">
-					<a-box position="0 1.226 -1.85" scale="3 2.5 0.1" color="#f67474" material="color:#950b0b;emissive:#000000;metalness:0.3" geometry="" id="cabinet_wall-1">
-					</a-box><a-box position="0 1.226 1.702" scale="3 2.5 0.1" color="#f67474" material="color:#950b0b;emissive:#000000;metalness:0.3" id="cabinet_wall-2" geometry="">
-					</a-box><a-box position="-1.545 1.226 -0.07" scale="3.5 2.5 0.1" color="#f67474" rotation="0 90 0" material="color:#950b0b;emissive:#000000;metalness:0.3" id="cabinet_wall-3" geometry="">
-					</a-box>
-					<a-box position="1.446 1.226 1.212" scale=".9 2.5 0.1" color="#f67474" rotation="0 90 0" material="color:#950b0b;emissive:#000000;metalness:0.3" id="cabinet_door-1" geometry="" visible="true">
-					</a-box>
-					<a-box position="1.446 1.226 .303" scale=".9 2.5 0.1" color="#f67474" rotation="0 90 0" material="color:#950b0b;emissive:#000000;metalness:0.3" id="cabinet_door-2" geometry="" visible="true">
-					</a-box>
-					<a-box position="1.446 1.226 -.6" scale=".9 2.5 0.1" color="#f67474" rotation="0 90 0" material="color:#950b0b;emissive:#000000;metalness:0.3" id="cabinet_door-3" geometry="" visible="true">
-					</a-box>
-					<a-box position="1.446 1.226 -1.51" scale=".9 2.5 0.1" color="#f67474" rotation="0 90 0" material="color:#950b0b;emissive:#000000;metalness:0.3" id="cabinet_door-4" geometry="" visible="true">
-					</a-box>
-					<a-box position="-0.003 2.439 -0.07" scale="3.5 3 0.1" color="#f67474" rotation="90 90 0" material="color:#950b0b;emissive:#000000;metalness:0.3" id="ceiling" geometry="">
-					</a-box><a-box position="-0.003 0.011 -0.07" scale="3.5 3 0.1" color="#f67474" rotation="90 90 0" material="color:#950b0b;emissive:#000000;metalness:0.3" id="floor" geometry="">
-					</a-box>
-				</a-entity>
-        -->
+
+
          <a-gltf-model id="officechair" src="models/officechair/scene.gltf" rotate="0 180 0" position="1 0 2.5"  gltf-model="models/officechair/scene.gltf" scale="0.015 0.015 0.015"></a-gltf-model>
 
       </rw-wall>
@@ -207,6 +194,8 @@ onclick="setLampLight()">
         <a-box id="WallLeftSide" scale="-.05 5 5.9" position="12 0 2.65" color="#ffffff"  material="src:#brickwall; repeat: 10 10"></a-box>
         <a-box id="WallLeftSide2" scale="-.05 5 5.9" position="12 0 9.85" color="#ffffff"  material="src:#brickwall; repeat: 10 10"></a-box>
       </rw-wall>
+
+      <!-- Front Entrance of my building -->
 			<rw-wall position="0 0 0">
           <a-box scale="2 .5 .05" position="6.25 2.25 0" material="src:#brickwall;"></a-box> 
           <a-box scale="1 .01 .5" position="6.25 .01 -.40"  rotation="0 0 180" src="images/doormatwelcome.jpg"></a-box> 
@@ -220,7 +209,6 @@ onclick="setLampLight()">
 			</rw-wall>
 
       
-      <!--<rw-floor position="0 0 0" material="color:#000000"></rw-floor>-->
       <rw-ceiling position="0 0 0" material="color:#FFFFFF"></rw-ceiling>
 		</rw-room>
     
@@ -235,7 +223,7 @@ onclick="setLampLight()">
 
 		</rw-room>
     	
-
+        <!-- Still working on implementing a light switch to turn on and off light sources -->
 				<a-entity scale="1 1 1" id="bed room">
 				<!--dynamic events-->
 				<script>
@@ -264,9 +252,10 @@ onclick="setLampLight()">
 				
 				
 			
-  <!-- Out of the box environment! -->
+  <!-- My worlds environment was set to the forest -->
     <a-entity environment="preset: forest; sunPosition: 1 5 -2; groundTexxture: plain; grid: none; fog: 0"><a-entity> 
 
+<!-- Lamp which is placed next to my PC area -->
     <a-entity position="6.5 1 6.5" rotation="0 45 0" collider-check id="desek-lamp" active="false">
       <a-box scale=".14 .14 .14" position="-.11 .581 1.002" color="#000" ></a-box>
       <a-light type="point" color="#222" position="-0.13 .581 1.002" id="LightSource"></a-light>
@@ -279,34 +268,7 @@ onclick="setLampLight()">
       <a-cylinder scale=".01 .05 .01" position="-.02 .58 1" rotation="90 90" color="#000"></a-cylinder>
       <a-cylinder scale=".01 1.5 .01" position="0 -.1 1" color="#000"></a-cylinder>
     </a-entity>
-	<!--	
-<a-entity id="CovidSummer" position="-4 0 4" >
-		<a-entity id="Apartment">
-      <a-gltf-model id="officechair" src="models/officechair/scene.gltf" rotate="0 180 0" position="10.5 0 1.75"  gltf-model="models/officechair/scene.gltf" id="officechair" scale="0.015 0.015 0.015"></a-gltf-model>
-	</a-entity>
-</a-entity>
--->
 
-
-<!--
-	<a-entity id="CovidSummer" position=" 5 0 0">
-		<a-entity id="Apartment">
-      <a-entity position="0 0 -5" geometry="height:7;width:10;primitive:plane" material="src:#brickwall; repeat: 10 10" id="1"></a-entity>
-      <a-entity position="0 0 -5" geometry="height:7;width:10;primitive:plane" material="src:#brickwall; repeat: 10 10" id="2" rotation="0 180 0" static-body="sphereRadius:NaN"></a-entity>
-      <a-entity position="0 0 5" geometry="height:7;width:10;primitive:plane" material="src:#brickwall; repeat: 10 10" id="3"></a-entity>
-      <a-entity position="0 0 5" geometry="height:7;width:10;primitive:plane" material="src:#brickwall; repeat: 10 10" id="4" rotation="0 180 0" static-body="sphereRadius:NaN"></a-entity>
-
-
-      
-     
-		</a-entity>
-	</a-scene>
- <a-entity id="parent" rotation="0 45 0" position="0 0 0">
-    <a-entity position="0 0 0" rotation="0 180 0" geometry="height:7;width:10;primitive:plane" material="src:#brickwall; repeat: 10 10" id="5"></a-entity>
-    <a-entity position="0 0 0" rotation="0 -360 0" geometry="height:7;width:10;primitive:plane" material="src:#brickwall; repeat: 10 10" id="6" static-body="sphereRadius:NaN"></a-entity>
-</a-entity>
- 	
--->
 </a-scene>
 </body>
 </html>
