@@ -4,6 +4,9 @@ We were given a project to design an environment in which COVID has changed me. 
 
 CS 4331 Virtual Reality - Fall 2020
 
+![Image of GIF](https://github.com/Schafer98/Schafer98.github.io/blob/master/images/ReportImages/AptGIF.gif)
+
+
 This is my VR Apartment that I created to represent how COVID-19 has effected me.  Over the summer I was my internship was cancelled and I was stuck here in Lubbock.  The objects that I have in my apartment represent a few of the things I would do on a regular basis that I will describe more later on.
 ![Image of Apartment Outside](https://github.com/Schafer98/Schafer98.github.io/blob/master/images/ReportImages/MyApt.PNG)
 
