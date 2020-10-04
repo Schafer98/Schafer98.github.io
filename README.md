@@ -39,3 +39,38 @@ Lastly where I spent the rest of my time was at my computer.  As you can see the
         <a-entity gltf-model="#TrashCup" scale=".9 .9 .9" position="19.8 0 1" rotation="0 225 0" event-set__makevisible="_event: mouseleave; visible: false" class="intersectable"></a-entity>
         <a-entity gltf-model="#TrashCup" scale=".9 .9 .9" position="18.5 0 2" rotation="0 225 0" event-set__makevisible="_event: mouseleave; visible: false" class="intersectable"></a-entity>
         <a-entity gltf-model="#TrashCup" scale=".9 .9 .9" position="18 0 .5" rotation="0 225 0" event-set__makevisible="_event: mouseleave; visible: false" class="intersectable"></a-entity>
+        
+        
+        
+        
+        
+3D Models List:  (28 Objects)
+        Trees
+        Welcome mat (Custom)
+        Building Structure (Custom)
+        Table (Custom)
+        Chairs to table (Custom)
+        Board Game (Custom)
+        Plant
+        Benchpress
+        Dumbbells
+        Motorcycle Wall Picture (Custom)
+        PC Desk (Custom)
+        Monitor (Custom)
+        Mouse and Keyboard (Custom)
+        Desk Chair
+        PC
+        Lamp (Custom)
+        Speakers
+        Trash Cups (With Custom Implementation - Disappear)
+        Fan (Custom)
+        Bed
+        Bed Lamp
+        Dressor 
+        Books
+        TV
+        TV Stand
+        Leather Couch
+        Dog (With Custom Implementation - Bark)
+        Lights
+        
