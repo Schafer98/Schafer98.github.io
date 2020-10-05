@@ -1,6 +1,7 @@
 # Schafer98.github.io
 We were given a project to design an environment in which COVID has changed me.  My scene describes the summer I had than the one I was supposed to have.  I was supposed to have an internship but due to the pandemic it was cancelled and was left with nothing for the summer.
 
+YouTube Link: https://youtu.be/F-BAtDGqgAw
 
 CS 4331 Virtual Reality - Fall 2020
 
