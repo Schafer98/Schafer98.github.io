@@ -2,6 +2,7 @@
 We were given a project to design an environment in which COVID has changed me.  My scene describes the summer I had than the one I was supposed to have.  I was supposed to have an internship but due to the pandemic it was cancelled and was left with nothing for the summer.
 
 YouTube Link: https://youtu.be/F-BAtDGqgAw
+Demo Link: https://schafer98.github.io./
 
 CS 4331 Virtual Reality - Fall 2020
 
@@ -48,33 +49,87 @@ Lastly where I spent the rest of my time was at my computer.  As you can see the
         
         
         
-3D Models List:  (28 Objects)--
-        Trees--
-        Welcome mat (Custom)--
-        Building Structure (Custom)--
-        Table (Custom)--
-        Chairs to table (Custom)--
-        Board Game (Custom)--
-        Plant--
-        Benchpress--
-        Dumbbells--
-        Motorcycle Wall Picture (Custom)--
-        PC Desk (Custom)--
-        Monitor (Custom)--
-        Mouse and Keyboard (Custom)--
-        Desk Chair--
-        PC--
-        Lamp (Custom)--
-        Speakers--
-        Trash Cups (With Custom Implementation - Disappear)--
-        Fan (Custom)--
-        Bed--
-        Bed Lamp--
-        Dressor --
-        Books--
-        TV--
-        TV Stand--
-        Leather Couch--
-        Dog (With Custom Implementation - Bark)--
-        Lights--
+3D Models List:  (28 Objects)
+
+Trees
+
+Welcome mat (Custom)
+
+Building Structure (Custom)
+
+Table (Custom)
+
+Chairs to table (Custom)
+
+Board Game (Custom)
+
+Plant
+
+Benchpress
+
+Dumbbells
+
+Motorcycle Wall Picture (Custom)
+
+PC Desk (Custom)
+
+Monitor (Custom)
+
+Mouse and Keyboard (Custom)
+
+Desk Chair      
+
+PC
+
+Lamp (Custom)
+
+Speakers
+
+Trash Cups (With Custom Implementation - Disappear)
+
+Fan (Custom)  
+
+Bed
+
+Bed Lamp
+
+Dressor    
+
+Books      
+
+TV
+
+TV Stand
+
+Leather Couch
+
+Dog (With Custom Implementation - Bark)  
+
+Lights
         
+        
+-------------------------------------------------------------------------------------------------
+
+
+Resources:
+
+Leather for chairs
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_39299662_close-up-of-a-color-natural-leather-texture-leather-background.html&psig=AOvVaw3obrpR3DZaYFAvqVoRgju9&ust=1601955301459000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMC6zNbCnOwCFQAAAAAdAAAAABAD
+
+Table Top:
+https://cdn.shopify.com/s/files/1/2179/1185/products/32201-SWTACH_1_c800d4c8-3609-41b1-8033-9f51b13446d8.jpg?v=1576044725
+
+Dog:
+https://sketchfab.com/3d-models/dog-a89b49b3d9c647a8805d8d5287f47f48
+
+TV:
+https://sketchfab.com/3d-models/led-tv-014e75456b4e465b9cecd1b136a0312b
+
+Gaming Computer:
+https://sketchfab.com/3d-models/gaming-pc-free-download-dbf9c15333814afa88345312b521ddab
+
+Speakers:
+https://sketchfab.com/3d-models/speaker-3456982171f24599b8f25404989d2a6e
+
+Trash Cup:
+https://sketchfab.com/3d-models/styrofoam-cup-f78aae905da1484997b27545e70e3f0e
